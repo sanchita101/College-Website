@@ -77,7 +77,6 @@ html, body{
     margin-right: 30px;
 }
 
-
 #contact-details p{
     display: none;
 }
@@ -103,8 +102,7 @@ html, body{
     text-transform: uppercase;
 } */
 
-/* 
-#nav-part1 a{
+/* #nav-part1 a{
     cursor: pointer;
     font-size: 16px;  
     border: none;
@@ -260,6 +258,10 @@ html, body{
     }
 }
 
+#news-mobile{
+    display: none;
+}
+
 /*-------------------------*/
 #middle-content{
     flex: 1;
@@ -344,6 +346,10 @@ html, body{
     transform: scale(1.1);
 }
 
+
+#middle-content-mobile{
+    display: none;
+}
 
 
 /* ---------- Principal's Message ------------ */
@@ -476,82 +482,6 @@ html, body{
 }
 /* --------------------------------------------------------- */
 
-/* maps and contact us */
-#reach-us{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 40px 30px;
-    /* background-color: #dcfda7; */
-}
-
-#google-map {
-    position: relative;
-    margin: 10px 20px;
-}
-
-#google-map h4{
-    color:#124E66;
-    text-align: center;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-#google-map iframe {
-    height: 430px;
-    width: 40vw;   
-}
-
-
-/* -----contact us------ */
-
-#contact-info .container {
-    height: 430px;
-    width: 50vw;
-    border-radius: 5px;
-    background-color: white;
-    padding: 20px;
-  }
-
-#contact-info h4{
-    color: #124E66;
-    text-align: center;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-}
-
-#contact-info .container input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-#contact-info .container input[type=submit] {
-  background-color: #124E66;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#contact-info .container input[type=submit]:hover {
-  background-color: #EBFFFF;
-  color: #124E66;
-  border: 1px solid #124E66;
-}
-
-
-
-
-/* ------------------------------------- */
-
 /* Blogs */
 #blogs{
     margin: 30px 40px;
@@ -648,9 +578,7 @@ html, body{
     background-color: #60ECFF;
     color: #000;
 }
-  
-  
-  /* RESPONSIVE QUERIES */
+
   
   @media (min-width: 320px) {
     .title-flex {
@@ -786,6 +714,79 @@ html, body{
 }
 
 /* Gallery Section End ==================================================*/
+
+/* maps and contact us */
+#reach-us{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 30px;
+    /* background-color: #dcfda7; */
+}
+
+#google-map {
+    position: relative;
+    margin: 10px 20px;
+}
+
+#google-map h4{
+    color:#124E66;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#google-map iframe {
+    height: 430px;
+    width: 40vw;   
+}
+
+
+/* -----contact us------ */
+
+#contact-info .container {
+    height: 430px;
+    width: 50vw;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+  }
+
+#contact-info h4{
+    color: #124E66;
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+#contact-info .container input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+#contact-info .container input[type=submit] {
+  background-color: #124E66;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-info .container input[type=submit]:hover {
+  background-color: #EBFFFF;
+  color: #124E66;
+  border: 1px solid #124E66;
+}
+
+/* ------------------------------------- */
 
 /*-----------------footer-------------------------*/
 #footer-section{
@@ -940,12 +941,6 @@ footer p {
 
     /* -------------------------------------------------------- */
 
-    #faculty-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-/* Mobile Menu Styles */
 
     .overlay {
         height: 0%;
@@ -1023,7 +1018,6 @@ footer p {
     }
 }
 
-
 @media (max-width: 850px) {
     #college-logo{
         margin-top: 2px;
@@ -1047,6 +1041,11 @@ footer p {
     }
     /* ================================ */
 
+    #right-content{
+        width: 100%;
+        margin-left: 0%;
+    }
+
     #slider{
         display: none;
     }
@@ -1055,15 +1054,160 @@ footer p {
         display: none;
     }
 
+    /* ------------------------------------------------ */
+
+    #middle-content-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    #slider-mobile {
+        height: 320px;
+        width: 100%;
+        position: relative;
+        border-radius: 8px;
+        background-image: url(./images/slider1.jpg);
+        background-size: cover;
+        background-position: top;
+        animation: slider 50s infinite linear;
+    }
+    
+    @keyframes slider {
+        0% {background-image: url(./images/slider1.jpg);}
+        45% {background-image: url(./images/slider2.jpg);}
+        80% {background-image: url(./images/slider3.jpg); background-position: center;}
+    }
+    
+    /*------------------------------------------------------------------------*/
+    #faculty-mobile {
+        /* margin-top: 10px; */
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    
+    #faculty-mobile h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #124E66;
+        text-transform: uppercase;
+    }
+    
+    .faculty-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    
+    .faculty-member {
+        /* display: flex;
+        align-items: center;
+        margin-bottom: 10px; */
+        width: 180px;
+        margin: 10px;
+        transition: transform 0.3s;
+    }
+    
+    .faculty-member img {
+        /* width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px; */
+        width: 90%;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    
+    .faculty-member p {
+        /* margin: 0;
+        font-weight: bold;
+        color: #333; */
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .faculty-member:hover {
+        transform: scale(1.1);
+    }
+    
+    .faculty-member:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* ======================================== */
+
+    #google-map iframe {
+        width: 70vw;
+    }
+    #contact-info .container {
+        width: 70vw;
+    }
 }
 
 @media (max-width: 1250px) {
+
     #nav{
         display: none;
     }
 
     #news{
         display: none;
+    }
+
+    #news-mobile {
+        display: block;
+        width: 350px;
+        height: 460px;
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 20px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    #news-mobile h2 {
+        color: #124E66;
+        z-index: 10;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    #news-mobile .news-items {
+        padding: 20px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        animation: scrollNews 5s linear infinite;
+    }
+    
+    /* #news .news-items :hover{
+        animation: none;
+    } */
+    
+    #news-mobile .news-item {
+        margin-bottom: 15px;
+    }
+    
+    #news-mobile .news-item a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: #124E66;
+    }
+    
+    @keyframes scrollNews {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
     }
 
 
