@@ -34,36 +34,89 @@
 
             <i class="ri-user-3-fill"></i>
             <a href="./login.html">Login</a>
+
+            <label for="menu-toggle" class="menu-icon">
+                <i class="ri-menu-fill"></i>
+            </label>        
         </div>
             
 
         <!-- mobile menu -->
+        <input type="checkbox" id="menu-toggle" />
         <div id="myNav" class="overlay">
-            <i class="ri-menu-fill" style="cursor:pointer" onclick="openNav()"></i>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+            <label for="menu-toggle" class="closebtn">&times;</label>
             <div id="overlay-content">
                 <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">ADMINISTRATION</a>
-                <a href="#">STUDENT CORNER</a>
-                <a href="#">ADMISSION</a>
-                <a href="#">COURSES OFFERRED</a>
+                <div class="dropdown-mobile">
+                    <a href="#" class="dropdown-btn">ABOUT <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content-mobile">
+                        <a href="#">Profile</a>
+                        <a href="#">Vision & Mission</a>
+                        <a href="#">Photo Gallery</a>
+                    </div>
+                </div>
+                <div class="dropdown-mobile">
+                    <a href="#" class="dropdown-btn">ADMINISTRATION <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content-mobile">
+                        <a href="#">Principal</a>
+                    </div>
+                </div>
+                <div class="dropdown-mobile">
+                    <a href="#" class="dropdown-btn">STUDENT CORNER <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content-mobile">
+                        <a href="#">Academic Calendar</a>
+                        <a href="#">Syllabus</a>
+                        <a href="#">Time-Tables</a>
+                        <a href="#">Student Events</a>
+                        <a href="#">Results</a>
+                    </div>
+                </div>
+                <div class="dropdown-mobile">
+                    <a href="#" class="dropdown-btn">ADMISSION <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content-mobile">
+                        <a href="#">Directorate Of Admissions</a>
+                        <a href="#">International Affairs</a>
+                        <a href="#">Apply Online For Transcripts</a>
+                    </div>
+                </div>
+                <div class="dropdown-mobile">
+                    <a href="#" class="dropdown-btn">COURSES OFFERED <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown-content-mobile">
+                        <a href="#">Medical Laboratory Technician</a>
+                        <a href="#">Operation Theatre Assistant</a>
+                        <a href="#">Ophthalmic Assistant</a>
+                        <a href="#">Dresser</a>
+                    </div>
+                </div>
                 <a href="#">SCHOLARSHIP</a>
+                <br>
                 <a href="#">CONTACT US</a>
             </div>
         </div>
-
-        <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
-
+        
         <script>
-            function openNav() {
-              document.getElementById("myNav").style.height = "100%";
-            }
-            
-            function closeNav() {
-              document.getElementById("myNav").style.height = "0%";
-            }
+            document.querySelectorAll('.dropdown-btn').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+                    const dropdownContent = this.nextElementSibling;
+        
+                    // Collapse all dropdowns
+                    document.querySelectorAll('.dropdown-content-mobile').forEach(content => {
+                        if (content !== dropdownContent) {
+                            content.style.maxHeight = null;
+                        }
+                    });
+        
+                    // Toggle the clicked dropdown
+                    if (dropdownContent.style.maxHeight) {
+                        dropdownContent.style.maxHeight = null;
+                    } else {
+                        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                    }
+                });
+            });
         </script>
+        
 
     </div>
 
@@ -282,7 +335,6 @@
         </p>
     </div>
 
-<br>
 <br>
 
     <div id="courses-offered">
