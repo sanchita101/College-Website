@@ -220,14 +220,14 @@
             <div class="news-items">
                 <div class="news-item">
                     <p>16/01/2024 : Notification <br> Health Department, Govt. Of Bihar 
-                        <a href="news1.pdf" target="_blank"> <br> Read more...</a></p>
+                        <a href="Notification.pdf" target="_blank"> <br> Read more...</a></p>
                 </div>
-                <div class="news-item">
+                <!-- <div class="news-item">
                     <p>News item 2...</p>
                 </div>
                 <div class="news-item">
                     <p>News item 3...</p>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -235,7 +235,52 @@
         <div id="middle-content">
 
             <!-- Slider -->
-            <div id="slider"></div>
+            <!-- <div id="slider"></div> -->
+
+            <div id="slider" class="slider">
+                <div class="slider-inner">
+                    <div class="slide">
+                        <img src="./images/slider1.jpg" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/slider2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/slider3.jpg" alt="Slide 3">
+                    </div>
+                </div>
+                <a class="prev-slider" onclick="prevSlide()">&#10094;</a>
+                <a class="next-slider" onclick="nextSlide()">&#10095;</a>
+            </div>
+            
+            <script>
+                let index = 0;
+
+                function showSlide(n) {
+                    const slides = document.querySelectorAll('.slide');
+                    const totalSlides = slides.length;
+                    
+                    if (n >= totalSlides) { index = 0; }
+                    if (n < 0) { index = totalSlides - 1; }
+                    
+                    const offset = -index * 100;
+                    document.querySelector('.slider-inner').style.transform = `translateX(${offset}%)`;
+                }
+
+                function nextSlide() {
+                    index++;
+                    showSlide(index);
+                }
+
+                function prevSlide() {
+                    index--;
+                    showSlide(index);
+                }
+
+                setInterval(nextSlide, 4000); // Change slide every 4 seconds
+
+
+            </script>
 
             
             <!-- Faculty Section -->
@@ -304,14 +349,14 @@
             <div class="news-items">
                 <div class="news-item">
                     <p>16/01/2024 : Notification <br> Health Department, Govt. Of Bihar 
-                        <a href="news1.pdf" target="_blank"> <br> Read more...</a></p>
+                        <a href="Notification.pdf" target="_blank"> <br> Read more...</a></p>
                 </div>
-                <div class="news-item">
+                <!-- <div class="news-item">
                     <p>News item 2...</p>
                 </div>
                 <div class="news-item">
                     <p>News item 3...</p>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- News Section for mobile version end -->
@@ -580,9 +625,10 @@
         <div id="footer-section1">
             <img src="./images/LOGO Footer.png" alt="Para-medical college logo" >
             <p>Phone No : +91-7004-890434 <br>
-                            +91-9534-229900</p>
+                            +91-9534-229900
+                            <br> Email : <a href="mailto:dr.rssparamedicalcollege@gmail.com" style="color: white;">dr.rssparamedicalcollege@gmail.com</a>
+            </p>
             <div class="icons">
-                <!-- <a href="#"><i>Blogs</i></a> -->
                 <i class="ri-facebook-fill"></i>
                 <i class="ri-twitter-fill"></i>
                 <i class="ri-google-fill"></i>
