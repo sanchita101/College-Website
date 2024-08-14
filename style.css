@@ -10,10 +10,6 @@ html, body {
     background: linear-gradient(90deg, rgba(255,245,236,1) 35%, rgba(18,78,102,1) 100%);
 }
 
-
-/* sparkle effect */
-
-
 /*Top Header*/
 #short-header{
     width: 100%;
@@ -173,7 +169,6 @@ html, body {
     cursor: pointer;
 }
 
-
 @media screen and (max-width: 768px) {
     /* Hide navigation links and show menu icon */
     #header-right a {
@@ -193,8 +188,6 @@ html, body {
         display: none;
     }
 }
-
-
 /*-------------------------------*/
 
 /* ----navbar---- */
@@ -253,7 +246,7 @@ html, body {
 
 }
 
-/* -----------Main navbar------------ */
+/* Main navbar */
 
 #nav {
     background-color: #124E66;
@@ -313,26 +306,25 @@ html, body {
     display: block;
 }
 
-/* Responsive styles */
-@media (min-width: 1025px) {
+@media (max-width: 1400px) {
     #nav-part1 {
         justify-content: space-between;
     }
 
     #nav-part1 a {
-        padding: 10px 18px; /* Adjust padding to fill the line */
-        font-size: 15px;
+        padding: 10px 18px;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     #nav-part1 {
         flex-direction: row;
         justify-content: center;
     }
 
     #nav-part1 a {
-        padding: 8px 15px; /* Adjust padding */
+        padding: 8px 15px;
         font-size: 14px;
     }
 }
@@ -383,20 +375,19 @@ html, body {
     padding: 20px;
     gap: 20px;
     display: flex;
-
 }
 
 /* news */
 #news {
+    height: 400px;
+    width: 300px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: 0 auto;
+    margin: 0 10px;
     overflow: hidden;
     position: relative;
-    height: 400px;
 }
 
 #news h2 {
@@ -452,11 +443,6 @@ html, body {
 }
 
 /*------------Middle Content Start-------------*/
-#middle-content{
-    flex: 1;
-    margin: 0%;
-}
-
 #middle-content-mobile{
     display: none;
 }
@@ -562,7 +548,7 @@ html, body {
 /*------------Middle Content End-------------*/
 
 
-/* Right Content (Principal's Message) Start*/
+/* Right Content --- (Principal's Message) --- Start*/
 #right-content {
     height: auto;
     width: 300px;
@@ -618,13 +604,58 @@ html, body {
     text-align: center;
     font-style: italic;
 }
-/* Right Content (Principal's Message) End*/
+/* Right Content --- (Principal's Message) --- End*/
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
+    #slider {
+        width: 650px;
+    }
+    #faculty {
+        width: 650px;  
+    }
+}
+
+@media (max-width: 1250px){
+    #slider {
+        width: 600px;
+    }
+    #faculty {
+        width: 600px;
+        padding-top: 15px;
+    }
+    #news{
+        max-width: 250px;
+        min-width: 200px;
+        margin: 5px;
+    }
+    #principal img {
+        width: 150px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 1100px){
+    #slider {
+        width: 500px;
+        height: 280px;
+    }
+    #faculty {
+        width: 500px;
+    }
+}
+
+@media (max-width: 980px) {
 
     #main-content {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    /* ========================= */
+
+    #principal img {
+        width: 200px;
+        height: 210px;
     }
 
     /* ========================= */
@@ -655,11 +686,11 @@ html, body {
     /* ========================= */
 
     #right-content{
-        width: 100%;
-        margin-left: 0%;
+        width: 99%;
+        margin: auto;
     }
 
-    /* ---------------------------------- */
+    /* =========================*/
     
     #slider{
         display: none;
@@ -669,31 +700,45 @@ html, body {
         display: none;
     }
 
-
     #middle-content-mobile{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        margin: auto;
     }
     
+    /* ============================= */
     #slider-mobile {
         height: 320px;
         width: 100%;
         position: relative;
         border-radius: 8px;
-        background-image: url(./images/slider1.jpg);
         background-size: cover;
-        background-position: top;
-        animation: slider-mobile 50s infinite linear;
+        background-position: center;
+        background-image: url(./images/slider1.jpg);
+        animation: slider-mobile 18s infinite ease-in-out;
     }
     
     @keyframes slider-mobile {
-        0% {background-image: url(./images/slider1.jpg);}
-        45% {background-image: url(./images/slider2.jpg);}
-        80% {background-image: url(./images/slider3.jpg); background-position: center;}
+        0% {
+            background-image: url(./images/slider1.jpg);
+            opacity: 1;
+        }
+        33% {
+            background-image: url(./images/slider2.jpg);
+            opacity: 1;
+        }
+        66% {
+            background-image: url(./images/slider3.jpg);
+            opacity: 1;
+        }
+        100% {
+            background-image: url(./images/slider1.jpg);
+            opacity: 1;
+        }
     }
-    
+
     /*-----------------------------------*/
+
     #faculty-mobile {
         text-align: center;
         padding-top: 30px;
@@ -741,8 +786,6 @@ html, body {
 }
 
 /* ===============Main Content End=================== */
-
-
 
 
 /* Mission and Vision */
