@@ -1,3 +1,6 @@
+<h2>Live Demo</h2>
+This website has been live since August 2024. You can visit it here: <a href="http://www.rssparamedicalcollege.in/#">RSS Paramedical College</a>
+
 <h2>Overview</h2>
 This project is a college website designed to provide comprehensive information about the college's various aspects, including news, administration, facilities, online courses, and sports. The website features a modern, responsive design suitable for both desktop and mobile views, ensuring accessibility and ease of use for all visitors.
 
