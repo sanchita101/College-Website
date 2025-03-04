@@ -21,6 +21,3 @@ This project is a college website designed to provide comprehensive information 
   <li>JavaScript: For interactive elements such as the slider and mobile navigation menu.</li>
   <li>Font Icons: Used for social media icons and navigation elements.</li>
 </ul>
-
-<h2>License</h2>
-This project is licensed under the MIT License.
